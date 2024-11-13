@@ -1,0 +1,233 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  background-color: #343a40;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+header .text {
+  font-weight: bold;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #007bff;
+  padding: 10px 0;
+}
+
+nav .Links_cabecalho {
+  text-align: center;
+}
+
+nav .links__header {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.1rem;
+}
+
+nav .links__header:hover {
+  text-decoration: underline;
+}
+
+/* Filter Dropdown */
+#filter {
+  margin: 20px;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Product List Styling */
+.produtos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Product Item Styling */
+.produto {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.produto img.product-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* Ensures images cover the box area */
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.produto h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.produto p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.produto button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.produto button:hover {
+  background-color: #218838;
+}
+
+/* Cart Button Styling */
+button.btn-info {
+  background-color: #17a2b8;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+button.btn-info:hover {
+  background-color: #138496;
+}
+
+/* Shopping Cart Modal Styling */
+#cart {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none; /* Hidden by default */
+  z-index: 1000;
+}
+
+#cart h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#cart-items {
+  margin-bottom: 20px;
+}
+
+#cart-items p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+#cart-total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+button.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Overlay for Cart Modal */
+.cart-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Add spacing around the page */
+section {
+  padding: 40px 10px;
+}
+
+@media (max-width: 767px) {
+  .produtos-lista {
+      grid-template-columns: 1fr 1fr;
+  }
+
+  /* Adjust product item width */
+  .produto {
+      margin: 10px;
+  }
+
+  .product-image {
+      width: 150px;
+      height: 150px;
+  }
+}
+
+/* Ensure all product images are 200px by 200px */
+.product-image {
+  
+  width: 200px;
+  height: 200px;
+  object-fit: cover;  /* Ensures the image maintains aspect ratio and fills the box */
+  display: block;
+  margin: 0 auto;  /* Centers the image */
+}
+
+/* Modal Clear Cart Button Styling */
+button.btn-danger {
+  margin-top: 20px;
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn-danger:hover {
+  background-color: #c82333;
+}
